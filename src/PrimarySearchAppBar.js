@@ -190,9 +190,9 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             
-         
           <Button variant="light">Home</Button>
-          <Button variant="light">Contact</Button>
+          <Button variant="light">About</Button>
+         <Button variant="light">Contact</Button>
           <Button variant="light">Join us</Button>
           <Button variant="contained">Login</Button>
 
