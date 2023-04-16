@@ -1,17 +1,16 @@
 
 import './App.css';
 import Footer from './Footer';
-import PrimarySearchAppBar from './PrimarySearchAppBar';
 import SocialLinks from'./SocialLinks';
-import HeroDataGrid from './HeroDatagrid';
+import Header from './Header';
+
 function App() {
   return (
     <div>
+     <Header/>
      
-    <PrimarySearchAppBar/>
-    <HeroDataGrid/>
-    <Footer/>
-    <SocialLinks/>
+     <Footer/>
+     <SocialLinks/>
     </div>
   );
 }
