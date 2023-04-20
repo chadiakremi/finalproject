@@ -10,7 +10,7 @@ import SignUpScreen from './SignUpScreen';
 import GridScreen from './GridScreen';
 import { Login } from '@mui/icons-material';
 import AddEmployee from './AddEmployee';
-
+import ForgotPassword from './ForgotPassword';
 
 function App() {
   return (
@@ -31,6 +31,8 @@ function App() {
           <TemplateRoute path='/directory' exact={true} component={GridScreen} />
 
           <TemplateRoute path='/add-employee' exact={true} component={AddEmployee} />
+
+          <TemplateRoute path='/forgot-passoword' exact={true} component={ForgotPassword} />
 
 
         </Switch>

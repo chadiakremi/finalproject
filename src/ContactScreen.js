@@ -14,6 +14,35 @@ const formStyle = {
  
  
 }
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const email = event.target.email.value;
+  
+  // Send email to Battleroyale1945@gmail.com
+  fetch('/contact-screen', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email })
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show a success message to the user
+      alert('thank you for contacting us!');
+    } else {
+      // Show an error message to the user
+      alert('there is a problem!! please try again later.');
+    }
+  })
+  .catch(error => {
+    // Show an error message to the user
+    alert('there is a problem!! please try again later.');
+    console.error(error);
+  });
+};
+
+
 
 function ContactScreen() {
   const [name, setName] = React.useState('');
@@ -24,12 +53,10 @@ function ContactScreen() {
   const [position, setPosition] = React.useState('');
   const [message, setMessage] = React.useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Send email to Battleroyale1945@gmail.com
-  };
 
+  
   return (
+    
     <form onSubmit={handleSubmit} style={formStyle}>
       <TextField
         required
